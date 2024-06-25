@@ -1,7 +1,8 @@
 .main {
-  display: flex;
+  display: grid;
+  grid-template-rows: auto 1fr;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -9,13 +10,22 @@
 
 .description {
   display: inherit;
-  justify-content: inherit;
+  justify-content: center;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  padding: 1rem;
+}
+
+.imageContainer {
+  display: grid;
+  flex-direction: column;
+  border: solid red;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .description a {
@@ -79,6 +89,7 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  outline: solid 2px red;
 }
 
 .center::before {
