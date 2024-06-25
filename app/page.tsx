@@ -1,7 +1,14 @@
+'use client'
+
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+
+  const handleClick = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
     <main className={styles.main}>
       <div>
@@ -22,7 +29,7 @@ export default function Home() {
           ></Image>
           <button>Upload Image</button>
           <div className={styles.center}>
-            <form>
+            <form onSubmit={handleClick} method="get">
               <div className={styles.form}>
                 <label>Tag Text</label>
                 <input type="text" id="tag-text"></input>
